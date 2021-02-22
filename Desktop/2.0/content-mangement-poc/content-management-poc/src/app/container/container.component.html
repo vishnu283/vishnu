@@ -1,0 +1,8 @@
+<div class="container">
+    <div>
+        <textarea [disabled]="edit" class="editor">{{containerText | json}}</textarea>
+        <button (click)="edit=!edit" *ngIf="edit">Edit</button>
+        <button (click)="edit=!edit" *ngIf="!edit">Save</button>
+    </div>
+    
+</div>
