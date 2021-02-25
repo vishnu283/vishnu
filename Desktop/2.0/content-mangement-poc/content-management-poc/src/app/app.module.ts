@@ -12,6 +12,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { AppContentService } from './app-content.service';
+import { NgJsonEditorModule } from 'ang-jsoneditor';
 
 
 @NgModule({
@@ -30,9 +33,11 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatListModule,
     MatIconModule,
     MatTreeModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatFormFieldModule,
+    NgJsonEditorModule
   ],
-  providers: [],
+  providers: [AppContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

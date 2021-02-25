@@ -1,8 +1,11 @@
 <div class="container">
-    <div>
-        <textarea [disabled]="edit" class="editor">{{containerText | json}}</textarea>
-        <button (click)="edit=!edit" *ngIf="edit">Edit</button>
-        <button (click)="edit=!edit" *ngIf="!edit">Save</button>
+    <div *ngIf="containerText !== undefined">
+		<div>
+			<json-editor (jsonChange)="changeLog($event)" [options]="editorOptions" [data]="containerText" #editor></json-editor>
+		</div>
+
+        <button (click)="editForm()" *ngIf="edit">Edit</button>
+        <button (click)="saveForm()" *ngIf="!edit">Save</button>
     </div>
-    
 </div>
+
